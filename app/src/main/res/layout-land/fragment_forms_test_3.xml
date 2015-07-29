@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_floating_material_light">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_forms_test"
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="5dp"
+        card_view:cardBackgroundColor="@color/cardview_light_background"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp">
+
+            <FrameLayout
+                android:layout_width="240dp"
+                android:layout_height="match_parent"
+                android:id="@+id/image_forms_container" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/image_forms_container"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?android:borderlessButtonStyle"
+                    android:textColor="@color/accent"
+                    android:src="@drawable/ic_info_outline_black_24dp"
+                    android:id="@+id/button_forms_card_info_3"
+                    android:background="@drawable/abc_btn_borderless_material"
+                    android:layout_marginTop="16dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?android:borderlessButtonStyle"
+                    android:textColor="@color/accent"
+                    android:src="@drawable/ic_directions_run_black_24dp"
+                    android:id="@+id/button_forms_card_train_3"
+                    android:background="@android:color/transparent"
+                    android:layout_marginTop="16dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?android:borderlessButtonStyle"
+                    android:textColor="@color/accent"
+                    android:src="@drawable/ic_video_library_black_24dp"
+                    android:id="@+id/button_forms_card_video_3"
+                    android:background="@android:color/transparent"
+                    android:layout_marginTop="16dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?android:borderlessButtonStyle"
+                    android:textColor="@color/accent"
+                    android:src="@drawable/ic_launch_black_24dp"
+                    android:id="@+id/button_forms_card_expand_3"
+                    android:background="@android:color/transparent"
+                    android:layout_marginTop="16dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="128dp"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_horizontal_cards"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
