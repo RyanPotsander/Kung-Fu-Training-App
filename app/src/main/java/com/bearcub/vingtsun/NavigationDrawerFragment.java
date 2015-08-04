@@ -37,8 +37,8 @@ public class NavigationDrawerFragment extends AbstractNavigationDrawer {
     public List<NavigationDrawerItem> getItemData() {
         List<NavigationDrawerItem> list = new ArrayList<>();
         int[] images = {R.drawable.ic_check_box, R.drawable.ic_check_box, R.drawable.ic_check_box,
-                R.drawable.ic_check_box, R.drawable.ic_check_box, R.drawable.ic_check_box};
-        String[] labels = {"Glossary", "My Training", "Forms Test 1", "Home Test 1", "Home Test 2",
+                R.drawable.ic_check_box, R.drawable.ic_check_box};
+        String[] labels = {"Glossary", "My Training", "Forms Test 1", "Home Test 2",
                 "Home Test 3"};
 
         /**

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_circle_transparent"
+        android:id="@+id/button_tech_1"
+        android:background="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_circle_transparent"
+        android:id="@+id/button_tech_2"
+        android:layout_below="@+id/button_tech_1"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_circle_transparent"
+        android:id="@+id/button_tech_3"
+        android:layout_below="@+id/button_tech_1"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_circle_transparent"
+        android:id="@+id/button_tech_4"
+        android:layout_below="@+id/button_tech_3"
+        android:background="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+
+
+
+</RelativeLayout>

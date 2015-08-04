@@ -26,6 +26,7 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.FieldPosition;
 import java.text.ParsePosition;
@@ -40,15 +41,15 @@ import java.util.Locale;
 /**
  * Created by Home on 7/16/2015.
  */
-public class TrainingFragment extends android.app.Fragment {
-    private static final String TAG = "training_log";
+public class TrainingFragment extends Fragment {
+    private static final String TAG = TrainingFragment.class.getSimpleName();
     public static final String SHARED_PREFERENCES_FILE_NAME = "training_preferences";
     public static final String KEY_FILE_EXISTS = "file_exists";
     private RecyclerView mRecyclerView;
     TrainingLogAdapter adapter;
     OnTouchItemSelectedListener mCallBack;
-    private List<TrainingItem> mItemList;
-    boolean fileExists;
+    private ArrayList<TrainingItem> mItemList;
+    boolean fileExists = false;
 
 
     public TrainingFragment(){}
@@ -295,11 +296,12 @@ public class TrainingFragment extends android.app.Fragment {
     private class TrainingLogAdapter extends RecyclerView.Adapter<TrainingLogAdapter.MyViewHolder> {
         private static final String TAG = "vtmaa_adapter";
         private final LayoutInflater inflater;
-        List<TrainingItem> list = Collections.emptyList();
+        //List<TrainingItem> list = Collections.emptyList();
         //ArrayList<ItemData> list = new ArrayList<>();
+        ArrayList<TrainingItem> list;
         Context context;
 
-        public TrainingLogAdapter(Context context, List<TrainingItem> list){
+        public TrainingLogAdapter(Context context, ArrayList<TrainingItem> list){
             inflater= LayoutInflater.from(context);
             this.list = list;
             this.context = context;
@@ -369,7 +371,7 @@ public class TrainingFragment extends android.app.Fragment {
 
         @Override
         public boolean onInterceptTouchEvent(RecyclerView recyclerView, MotionEvent motionEvent) {
-            View view = recyclerView.findChildViewUnder(motionEvent.getX(),motionEvent.getY());
+            View view = recyclerView.findChildViewUnder(motionEvent.getX(), motionEvent.getY());
 
             if(view!=null && trainingLogClickListener!=null && gestureDetector.onTouchEvent(motionEvent)){
                 trainingLogClickListener.onClick(view, recyclerView.getChildAdapterPosition(view));

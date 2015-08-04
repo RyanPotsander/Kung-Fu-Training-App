@@ -10,7 +10,7 @@ import android.widget.ImageView;
 /**
  * Created by Home on 7/20/2015.
  */
-public class CardFrontTest3 extends Fragment implements FormsFragmentTest3.OnRecyclerItemSelectedListener {
+public class CardFrontTest3 extends Fragment implements FormsFragment.OnRecyclerItemSelectedListener {
     ImageView mFocusImageView;
 
     public CardFrontTest3(){}

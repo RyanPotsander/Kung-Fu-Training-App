@@ -23,8 +23,8 @@ import java.util.List;
 /**
  * Created by Home on 7/20/2015.
  */
-public class FormsFragmentTest3 extends BaseRecyclerView implements View.OnClickListener{
-    private static final String TAG =FormsFragmentTest3.class.getSimpleName();
+public class FormsFragment extends BaseRecyclerView implements View.OnClickListener{
+    private static final String TAG =FormsFragment.class.getSimpleName();
     private static final String INFO_BUTTON_TAG = "info_button";
     private static final String TRAIN_BUTTON_TAG = "train_button";
     private static final String VIDEO_BUTTON_TAG = "video_button";
@@ -40,7 +40,7 @@ public class FormsFragmentTest3 extends BaseRecyclerView implements View.OnClick
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_forms_test_3, container, false);
+        View view = inflater.inflate(R.layout.fragment_forms, container, false);
 
         setUpRecyclerView((RecyclerView) view.findViewById(R.id.recycler_horizontal_cards));
 
@@ -53,11 +53,11 @@ public class FormsFragmentTest3 extends BaseRecyclerView implements View.OnClick
         return view;
     }
 
-    public static FormsFragmentTest3 newInstance(){
-        return new FormsFragmentTest3();
+    public static FormsFragment newInstance(){
+        return new FormsFragment();
     }
 
-    public FormsFragmentTest3(){
+    public FormsFragment(){
         //required empty constructor
     }
 

@@ -64,6 +64,11 @@ public class DefinitionsFragment extends BaseRecyclerView {
         return list;
     }
 
+    private class DefinitionsItem {
+        String name;
+    }
+
+
     private class DefinitionsAdapter extends RecyclerView.Adapter<DefinitionsAdapter.MyViewHolder> {
         private static final String TAG = "definitions_adapter";
         private final LayoutInflater inflater;
